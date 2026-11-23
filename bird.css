@@ -1,39 +1,122 @@
-[popover].hovercard {
-    position-area: block-end span-inline-end;
-    position-try-fallbacks: flip-block, flip-inline;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    overflow-x: hidden;
+    font: 100%/1.5 system-ui, sans-serif;
+    background-color: #f5ead7;
+}
+
+h1 {
+    margin: 1.5rem;
+    text-align: center;
+    color: #5b8c88;
+}
+
+.card-img {
+    max-width: 100%;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 1px solid #2b2b2b;
+}
+
+.card-img-container img {
+    height: 20rem;
+    object-fit: cover;
+}
+
+#card-grid {
+    width: 100vw;
+    position: relative;
+    display: grid;
+    grid-template-columns: max-content;
+    gap: 1rem;
+}
+
+@media screen and (width >= 480px) {
+    #card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (width >= 968px) {
+    #card-grid {
+        width: 960px;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0 auto;
+    }
+}
+
+.card {
+    border: 1px solid #2b2b2b;
+    border-radius: 10px;
+    display: grid;
+}
+
+.card-title {
+    text-align: center;
+    border-bottom: 1px solid #2b2b2b;
+    color: #2e4d2d;
+    background-color: #ffe8c2;
+}
+
+.card p {
+    padding: 1rem;
+}
+
+#card1-hover,
+#card2-hover,
+#card3-hover {
+    margin: 0;
+    margin-top: -25rem;
+    inset: auto;
+    position-area: bottom;
+}
+
+[popover] {
+    padding: 1.2rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #2b2b2b;
     opacity: 0;
     transform-origin: top;
 }
 
-[popover].hovercard:popover-open {
+[popover]:popover-open {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: scale(1);
 }
 
 @starting-style {
-    [popover].hovercard:popover-open {
+    [popover]:popover-open {
         opacity: 0;
-        transform: translateY(-10px) scale(0.95);
+        transform: scale(0.95);
     }
 }
 
 @media (prefers-reduced-motion: no-preference) {
-    [popover].hovercard {
+    [popover] {
         transition:
             opacity 0.5s,
             transform,
             display,
             overlay;
-        transition-delay: 0.4s;
+        /* transition-delay: 0.3s; */
         transition-behavior: allow-discrete;
     }
 }
 
-[interestfor] {
-    interest-delay: 0.2s 0.1s;
-}
-
-.card-img {
-    width: 300px;
-    border-radius: 10px;
+.view-details {
+    background: #ffe8c2;
+    border: none;
+    border-top: 1px solid #2b2b2b;
+    border-radius: 0 0 10px 10px;
+    padding: 1rem 0;
+    margin: 0;
+    font: inherit;
+    font-weight: bold;
+    color: #c46a4b;
+    cursor: pointer;
 }
