@@ -1,0 +1,83 @@
+.card-img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 1px solid #666;
+}
+
+#card-grid {
+    width: 960px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 0 auto;
+}
+
+.card {
+    border: 1px solid #666;
+    border-radius: 10px;
+    display: grid;
+}
+
+.card h2 {
+    text-align: center;
+    border-bottom: 1px solid #666;
+}
+
+.card p {
+    padding-inline: 1rem;
+}
+
+#card1-hover,
+#card2-hover,
+#card3-hover {
+    margin: 0;
+    margin-top: -25rem;
+    inset: auto;
+    position-area: bottom;
+}
+
+[popover] {
+    padding: 1.2rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #999;
+    opacity: 0;
+    transform-origin: top;
+}
+
+[popover]:popover-open {
+    opacity: 1;
+    transform: scale(1);
+}
+
+@starting-style {
+    [popover]:popover-open {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    [popover] {
+        transition:
+            opacity 0.5s,
+            transform,
+            display,
+            overlay;
+        /* transition-delay: 0.3s; */
+        transition-behavior: allow-discrete;
+    }
+}
+
+.view-details {
+    background: #f3f3f3;
+    border: none;
+    border-top: 1px solid #666;
+    border-radius: 0 0 10px 10px;
+    padding: 1rem 0;
+    margin: 0;
+    font: inherit;
+    font-weight: bold;
+    color: red;
+    cursor: pointer;
+}
