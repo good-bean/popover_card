@@ -176,6 +176,7 @@ h3 {
     font: inherit;
     font-size: 0.8rem;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .view-details {
