@@ -99,6 +99,43 @@ h3 {
 [popover] {
     opacity: 0;
     transform-origin: top;
+    background-color: white;
+    color: #2b2b2b;
+    width: 380px;
+    border: 1px solid #cacaca;
+    padding: 1rem;
+    margin: 0;
+    margin-top: -10rem;
+    inset: auto;
+    position-area: bottom;
+}
+
+[popover] p {
+    margin-top: 0.5rem;
+}
+
+.claim {
+    font-weight: bold;
+}
+
+[popover] small {
+    font-size: 0.75rem;
+    color: #5b5b5b;
+}
+
+.popover-greenbox {
+    background-color: #5b8c88;
+    color: #f5ead7;
+    padding: 0.5rem;
+    margin-block: 1rem;
+}
+
+.popover-greenbox p:first-of-type {
+    font-weight: bold;
+}
+
+.popover-greenbox p:last-of-type {
+    font-size: 0.75rem;
 }
 
 [popover]:popover-open {
@@ -128,35 +165,17 @@ h3 {
     }
 }
 
-#basic-tee-quick-1,
-#basic-tee-quick-2,
-#linen-pants-quick,
-#cord-jacket-quick {
-    background-color: #5b8c88;
-    color: #f5ead7;
-    border: 1px solid #2b2b2b;
-    padding: 1rem;
-    margin: 0;
-    margin-top: -10rem;
-    inset: auto;
-    position-area: bottom;
-}
-
-#basic-tee-quick-1 p,
-#basic-tee-quick-2 p,
-#linen-pants-quick p,
-#cord-jacket-quick p {
-    margin-top: 0.5rem;
-}
-
-.full-details {
+.popover-close {
     background: #c46a4b;
-    color: white;
-    border: 1px solid #2b2b2b;
+    color: #f5ead7;
+    border: 1px solid #cacaca;
     padding: 0.5rem;
-    margin-top: 0.5rem;
+    margin-block: 1rem;
+    width: 100%;
+    text-align: left;
     font: inherit;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
+    font-weight: bold;
 }
 
 .view-details {
